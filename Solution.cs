@@ -1,27 +1,28 @@
 
 using System;
 
+
 public class Solution
 {
     public int MaxHeightOfTriangle(int red, int blue)
     {
-        return Math.Max(calculateMaxHeightOfTriangle(red, blue), calculateMaxHeightOfTriangle(blue, red));
+        return Math.Max(CalculateMaxHeightOfTriangle(red, blue), CalculateMaxHeightOfTriangle(blue, red));
     }
 
-    private int calculateMaxNumberOfOddRowsStartingFromOne(int numberOfBalls)
+    private int CalculateMaxNumberOfOddRowsStartingFromOne(int numberOfBalls)
     {
         return (int)(Math.Sqrt(numberOfBalls));
     }
 
-    private int calculateMaxNumberOfEvenRowsStartingFromTwo(int numberOfBalls)
+    private int CalculateMaxNumberOfEvenRowsStartingFromTwo(int numberOfBalls)
     {
         return (int)((-1 + Math.Sqrt(1 + 4 * numberOfBalls)) / 2);
     }
 
-    private int calculateMaxHeightOfTriangle(int firstColor, int secondColor)
+    private int CalculateMaxHeightOfTriangle(int firstColor, int secondColor)
     {
-        int numberOfRowsWithFirstColorStaringFromOne = calculateMaxNumberOfOddRowsStartingFromOne(firstColor);
-        int numberOfRowsWithSecondColorStartingFromTwo = calculateMaxNumberOfEvenRowsStartingFromTwo(secondColor);
+        int numberOfRowsWithFirstColorStaringFromOne = CalculateMaxNumberOfOddRowsStartingFromOne(firstColor);
+        int numberOfRowsWithSecondColorStartingFromTwo = CalculateMaxNumberOfEvenRowsStartingFromTwo(secondColor);
 
         if (numberOfRowsWithFirstColorStaringFromOne <= numberOfRowsWithSecondColorStartingFromTwo)
         {
