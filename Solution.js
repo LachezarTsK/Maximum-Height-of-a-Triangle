@@ -21,7 +21,7 @@ function calculateMaxNumberOfOddRowsStartingFromOne(numberOfBalls) {
  * @return {number}
  */
 function calculateMaxNumberOfEvenRowsStartingFromTwo(numberOfBalls) {
-    return Math.floor((-1 + Math.floor(Math.sqrt(1 + 4 * numberOfBalls))) / 2);
+    return Math.floor((-1 + Math.sqrt(1 + 4 * numberOfBalls)) / 2);
 }
 
 /**
