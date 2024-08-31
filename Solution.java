@@ -6,11 +6,11 @@ public class Solution {
     }
 
     private int calculateMaxNumberOfOddRowsStartingFromOne(int numberOfBalls) {
-        return (int) Math.floor(Math.sqrt(numberOfBalls));
+        return (int) Math.sqrt(numberOfBalls);
     }
 
     private int calculateMaxNumberOfEvenRowsStartingFromTwo(int numberOfBalls) {
-        return (int) Math.floor((-1 + Math.floor(Math.sqrt(1 + 4 * numberOfBalls))) / 2);
+        return (int) ((-1 + Math.sqrt(1 + 4 * numberOfBalls)) / 2);
     }
 
     private int calculateMaxHeightOfTriangle(int firstColor, int secondColor) {
