@@ -10,7 +10,7 @@ public class Solution {
     }
 
     private int calculateMaxNumberOfEvenRowsStartingFromTwo(int numberOfBalls) {
-        return (int) Math.floor((-1 + (int) Math.floor(Math.sqrt(1 + 4 * numberOfBalls))) / 2);
+        return (int) Math.floor((-1 + Math.floor(Math.sqrt(1 + 4 * numberOfBalls))) / 2);
     }
 
     private int calculateMaxHeightOfTriangle(int firstColor, int secondColor) {
