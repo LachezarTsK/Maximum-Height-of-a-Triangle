@@ -8,7 +8,7 @@ function calculateMaxNumberOfOddRowsStartingFromOne(numberOfBalls: number): numb
 }
 
 function calculateMaxNumberOfEvenRowsStartingFromTwo(numberOfBalls: number): number {
-    return Math.floor((-1 + Math.floor(Math.sqrt(1 + 4 * numberOfBalls))) / 2);
+    return Math.floor((-1 + Math.sqrt(1 + 4 * numberOfBalls)) / 2);
 }
 
 function calculateMaxHeightOfTriangle(firstColor: number, secondColor: number): number {
